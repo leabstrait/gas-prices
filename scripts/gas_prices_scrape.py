@@ -80,7 +80,7 @@ def scrape_monthly_data():
         month = 1
         for price in all_prices:
             
-            date = year.string.strip() + '-' + f'{month:02}'
+            date = year.string.strip() + '-' + f'{month:02}' + '-' + '01'
             
             month = month + 1
             records.append([date, price.string])
