@@ -8,6 +8,8 @@ This data repository follows the **Tabular Data Package** format. Read more [her
 
 
 ## To fetch the latest data and generate CSVs
+
+Run:
 ```python
 python scripts/gas_prices.py
 ```
