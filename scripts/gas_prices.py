@@ -30,7 +30,7 @@ def toCSV(dataRows, csvFile):
 def makeDatapackage():
     f = open('../datapackage.json', 'w+')
     f.write(constants.DATAPACKAGE_JSON)
-    f.close
+    f.close()
 
 def retrieve_uri_data(uri):
     resp = urllib.request.urlopen(uri)
