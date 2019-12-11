@@ -1,0 +1,79 @@
+
+ {
+    "name": "gas-prices",
+    "title": "Henry Hub Natural Gas Spot prices listed Daily, Weekly, Monthly and  Annually",
+    "resources": [
+        {
+            "name": "daily_gas_prices",
+            "path": "data/daily_gas_prices.csv",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "Date",
+                        "type": "date"
+                    },
+                    {
+                        "name": "Price(Dollars per Million Btu)",
+                        "type": "float"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "weekly_gas_prices",
+            "path": "data/weekly_gas_prices.csv",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "Date",
+                        "type": "date"
+                    },
+                    {
+                        "name": "Price(Dollars per Million Btu)",
+                        "type": "float"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "monthly_gas_prices",
+            "path": "data/monthly_gas_prices.csv",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "Date",
+                        "type": "date"
+                    },
+                    {
+                        "name": "Price(Dollars per Million Btu)",
+                        "type": "float"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "annual_gas_prices",
+            "path": "data/annual_gas_prices.csv",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "Date",
+                        "type": "date"
+                    },
+                    {
+                        "name": "Price(Dollars per Million Btu)",
+                        "type": "float"
+                    }
+                ]
+            }
+        }
+    ]
+}
