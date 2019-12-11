@@ -1,75 +1,110 @@
-
- {
+{
     "name": "gas-prices",
     "title": "Henry Hub Natural Gas Spot prices listed Daily, Weekly, Monthly and  Annually",
     "resources": [
         {
-            "name": "daily_gas_prices",
-            "path": "data/daily_gas_prices.csv",
+            "name": "api_daily_gas_prices",
+            "path": "data/api_daily_gas_prices.csv",
             "format": "csv",
             "mediatype": "text/csv",
             "schema": {
                 "fields": [
                     {
-                        "name": "Date",
+                        "name": "date",
                         "type": "date"
                     },
                     {
-                        "name": "Price(Dollars per Million Btu)",
+                        "name": "price",
                         "type": "float"
                     }
                 ]
             }
         },
         {
-            "name": "weekly_gas_prices",
-            "path": "data/weekly_gas_prices.csv",
+            "name": "api_weekly_gas_prices",
+            "path": "data/api_weekly_gas_prices.csv",
             "format": "csv",
             "mediatype": "text/csv",
             "schema": {
                 "fields": [
                     {
-                        "name": "Date",
+                        "name": "date",
                         "type": "date"
                     },
                     {
-                        "name": "Price(Dollars per Million Btu)",
+                        "name": "price",
                         "type": "float"
                     }
                 ]
             }
         },
         {
-            "name": "monthly_gas_prices",
-            "path": "data/monthly_gas_prices.csv",
+            "name": "api_monthly_gas_prices",
+            "path": "data/api_monthly_gas_prices.csv",
             "format": "csv",
             "mediatype": "text/csv",
             "schema": {
                 "fields": [
                     {
-                        "name": "Date",
+                        "name": "date",
                         "type": "date"
                     },
                     {
-                        "name": "Price(Dollars per Million Btu)",
+                        "name": "price",
                         "type": "float"
                     }
                 ]
             }
         },
         {
-            "name": "annual_gas_prices",
-            "path": "data/annual_gas_prices.csv",
+            "name": "api_annual_gas_prices",
+            "path": "data/api_annual_gas_prices.csv",
             "format": "csv",
             "mediatype": "text/csv",
             "schema": {
                 "fields": [
                     {
-                        "name": "Date",
+                        "name": "date",
                         "type": "date"
                     },
                     {
-                        "name": "Price(Dollars per Million Btu)",
+                        "name": "price",
+                        "type": "float"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "scrape_daily_gas_prices",
+            "path": "data/scrape_daily_gas_prices.csv",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "date",
+                        "type": "date"
+                    },
+                    {
+                        "name": "price",
+                        "type": "float"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "scrape_monthly_gas_prices",
+            "path": "data/scrape_monthly_gas_prices.csv",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "date",
+                        "type": "date"
+                    },
+                    {
+                        "name": "price",
                         "type": "float"
                     }
                 ]
