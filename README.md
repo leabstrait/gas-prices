@@ -9,7 +9,26 @@ This data repository follows the **Tabular Data Package** format. Read more [her
 
 ## To fetch the latest data and generate CSVs
 
-Run:
-```python
-python scripts/gas_prices.py
+CD into the scripts directory:
+```bash
+cd scripts
 ```
+
+Install dependencies from requirements.txt
+```bash
+pip install -r requirements.txt 
+```
+
+Run either of these, one uses the official API, the other scrapes the required data from the `HTML` source:
+```python
+python gas_prices_api.py
+```
+### OR
+```python
+python gas_prices_scrape.py
+```
+
+# TODOs
+
+- Add Visualisation
+- Add methods to scrape the weekly and annual data from their tables
