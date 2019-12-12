@@ -12,7 +12,7 @@ def make_data_dir():
 # Write data to the provided CSV fle
 def toCSV(dataRows, csvFile):
     header = ['date', 'price']
-    with open(csvFile, 'w+') as f:
+    with open(csvFile, 'w+', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(header)
         writer.writerows(dataRows)
