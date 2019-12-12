@@ -31,4 +31,4 @@ python gas_prices_scrape.py
 # TODOs
 
 - Add Visualisation
-- Add methods to scrape the weekly and annual data from their tables
+- ~~Add methods to scrape the weekly and annual data from their tables~~
