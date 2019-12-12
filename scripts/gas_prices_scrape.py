@@ -45,6 +45,7 @@ def scrape_daily_data():
     records = []
     for week in all_weeks:
         day = 0
+        
         for price in all_prices:
             week_string = week.string.strip()
             date = ( week_string[:4]                        +
@@ -82,13 +83,16 @@ def scrape_weekly_data():
     for year_month in all_years_months:        
         week = 1
         year_month_string = year_month.string.strip()
+
         for weekend_date in all_weekend_dates:
             weekend_date_string = weekend_date.string.strip()
+
             if not (len(weekend_date_string)==0):
                 date = (year_month_string[:4]   +
                         '-'                     +
                         weekend_date_string.replace('/','-'))
                 records.append([date, all_prices[week-1].string.strip()])
+
             week = week + 1
 
             if week > 5:
@@ -115,8 +119,7 @@ def scrape_monthly_data():
     records = []
     for year in all_years:
         month = 1
-        for price in all_prices:
-            
+        for price in all_prices:            
             date = year.string.strip() + '-' + f'{month:02}' + '-' + '01'
             
             month = month + 1
