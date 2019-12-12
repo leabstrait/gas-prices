@@ -45,11 +45,12 @@ def scrape_daily_data():
     for week in all_weeks:
         day = 0
         for price in all_prices:
-            date = ( week.string.strip()[:4]                     +
-                     '-'                                         +
-                     f'{month_num(week.string.strip()[5:8]):02}' +
-                     '-'                                         +
-                     f'{int(week.string.strip()[9:11])+day:02}'
+            week_string = week.string.strip()
+            date = ( week_string[:4]                        +
+                     '-'                                    +
+                     f'{month_num(week_string[5:8]):02}'    +
+                    '-'                                     +
+                     f'{(int(week_string[9:11]) + day):02}'
                     )
             
             day = day + 1
