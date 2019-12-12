@@ -114,8 +114,44 @@ DATAPACKAGE_JSON = '''{
             }
         },
         {
+            "name": "scrape_weekly_gas_prices",
+            "path": "data/scrape_weekly_gas_prices.csv",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "date",
+                        "type": "date"
+                    },
+                    {
+                        "name": "price",
+                        "type": "float"
+                    }
+                ]
+            }
+        },
+        {
             "name": "scrape_monthly_gas_prices",
             "path": "data/scrape_monthly_gas_prices.csv",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "date",
+                        "type": "date"
+                    },
+                    {
+                        "name": "price",
+                        "type": "float"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "scrape_annual_gas_prices",
+            "path": "data/scrape_annual_gas_prices.csv",
             "format": "csv",
             "mediatype": "text/csv",
             "schema": {
