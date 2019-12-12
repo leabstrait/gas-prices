@@ -12,6 +12,7 @@ csv_file_monthly = constants.DATA_DIR + '/scrape_monthly_gas_prices.csv'
 csv_file_annual  = constants.DATA_DIR + '/scrape_annual_gas_prices.csv'
 
 # DAILY
+# =====================================================================================
 
 def month_num(month_str):
     nums = {
@@ -62,8 +63,43 @@ def scrape_daily_data():
         
     toCSV(records, csv_file_daily)
 
+# WEEKLY
+# =====================================================================================
+
+def scrape_weekly_data():
+
+    resp = urllib.request.urlopen(constants.WEEKLY_SERIES_URI)
+    resp_data = resp.read()
+
+    soup = BeautifulSoup(resp_data, 'html.parser')
+    data_table = soup.find_all('table')[4]
+
+    all_years_months = data_table.find_all('td', {"class": "B6"})
+    all_weekend_dates = data_table.find_all('td', {"class": "B5"})
+    all_prices  = data_table.find_all('td', {"class": "B3"})
+
+    records = []
+    for year_month in all_years_months:        
+        week = 1
+        year_month_string = year_month.string.strip()
+        for weekend_date in all_weekend_dates:
+            weekend_date_string = weekend_date.string.strip()
+            if not (len(weekend_date_string)==0):
+                date = (year_month_string[:4]   +
+                        '-'                     +
+                        weekend_date_string.replace('/','-'))
+                records.append([date, all_prices[week-1].string.strip()])
+            week = week + 1
+
+            if week > 5:
+                all_weekend_dates = all_weekend_dates[5:]
+                all_prices = all_prices[5:]
+                break
+        
+    toCSV(records, csv_file_weekly)
 
 # MONTHLY
+# =====================================================================================
 
 def scrape_monthly_data():
 
@@ -93,6 +129,7 @@ def scrape_monthly_data():
     toCSV(records, csv_file_monthly)
 
 # ANNUAL
+# =====================================================================================
 
 def scrape_annual_data():
 
@@ -124,13 +161,8 @@ def scrape_annual_data():
 
 if __name__ == '__main__':
     scrape_daily_data()
-    # TODO: scrape_weekly_data()
+    scrape_weekly_data()
     scrape_monthly_data()
     scrape_annual_data()
 
     makeDatapackage()
-
-
-
-
-
