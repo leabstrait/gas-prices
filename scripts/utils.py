@@ -11,6 +11,7 @@ def make_data_dir():
 
 # Write data to the provided CSV fle
 def toCSV(dataRows, csvFile):
+    dataRows = filter(lambda x: x[0] != None and x[1] != None,  dataRows)
     header = ['date', 'price']
     with open(csvFile, 'w+', newline='') as f:
         writer = csv.writer(f)
