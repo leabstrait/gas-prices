@@ -20,11 +20,11 @@ pip install -r requirements.txt
 ```
 
 Run either of these, one uses the official API, the other scrapes the required data from the `HTML` source:
-```python
+```bash
 python gas_prices_api.py
 ```
 ### OR
-```python
+```bash
 python gas_prices_scrape.py
 ```
 
