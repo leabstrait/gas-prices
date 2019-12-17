@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>Natural Gas Spot Price</title>
+</head>
+
+<body>
+    <h1>Line Charts for Natural Gas Spot Price</h1>
+
+    <h3>Daily</h3>
+    <div id="line-chart-daily"></div>
+    <h3>Weekly</h3>
+    <div id="line-chart-weekly"></div>
+    <h3>Monthly</h3>
+    <div id="line-chart-monthly"></div>
+    <h3>Annual</h3>
+    <div id="line-chart-annual"></div>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="index.js">        </script>
+    <script>
+
+        csvToLineChart('#line-chart-daily', '../data/scrape_daily_gas_prices.csv', '%Y-%m-%d')
+        csvToLineChart('#line-chart-weekly', '../data/scrape_weekly_gas_prices.csv', '%Y-%m-%d')
+        csvToLineChart('#line-chart-monthly', '../data/scrape_monthly_gas_prices.csv', '%Y-%m-%d')
+        csvToLineChart('#line-chart-annual', '../data/scrape_annual_gas_prices.csv', '%Y')
+
+    </script>
+</body>
+
+</html>
