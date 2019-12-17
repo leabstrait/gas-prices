@@ -1,6 +1,6 @@
 # Henry Hub Natural Gas Spot Prices
 
-This is an exercise in Data Acquisition and Visualization. The dataset used is fetched form the US Energy Information Administration website
+This is an exercise in Data Acquisition and Visualization. The dataset used is fetched form the US Energy Information Administration [website](https://www.eia.gov/dnav/ng/hist/rngwhhdD.htm)
 
 *The prices are listed in Dollars per Million BTU(British Thermal Unit)*
 
@@ -20,11 +20,11 @@ pip install -r requirements.txt
 ```
 
 Run either of these, one uses the official API, the other scrapes the required data from the `HTML` source:
-```python
+```bash
 python gas_prices_api.py
 ```
 ### OR
-```python
+```bash
 python gas_prices_scrape.py
 ```
 
