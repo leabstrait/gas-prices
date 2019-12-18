@@ -32,19 +32,17 @@ python gas_prices_scrape.py
 
 Navigate to [visualization](visualization/) for the web version.
 
-*If running locally*
+***If running locally***
 
-CD into the visualization directory:
-```bash
-cd visualization
-```
+Stay in the project root directory `gas-prices/`:
 
-Run python `simple HTTP` server since some browsers block `CORS` for `file://` protocol.
+We could just open up `visualization/index.html` but since some browsers block `CORS` for `file://` protocol it won't display the charts.
+In that case: run python's `simple HTTP` server
 ```bash
 python -m http.server
 Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 ```
-Then point your browser to `localhost:8000` or any other port specified while creating the server.
+Then point your browser to `localhost:8000/visualization`. Use any other port if specified while creating the server.
 
 # TODOs
 
