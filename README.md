@@ -37,7 +37,11 @@ Navigate to [visualization](visualization/) for the web version.
 Stay in the project root directory `gas-prices/`:
 
 We could just open up `visualization/index.html` but since some browsers block `CORS` for `file://` protocol it won't display the charts.
+<<<<<<< HEAD
 In that case: run python's `simple HTTP` server
+=======
+In that case: run python `simple HTTP` server
+>>>>>>> a913f9ee23138756906a07b91de155eb52f576a0
 ```bash
 python -m http.server
 Serving HTTP on :: port 8000 (http://[::]:8000/) ...
