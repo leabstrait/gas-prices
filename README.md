@@ -30,7 +30,7 @@ python gas_prices_scrape.py
 
 ## Line Chart Visualization
 
-Navigate to [visualization](https://leabstrait.github.io/gas-prices-data/) for the web version.
+Navigate to [visualization](https://leabstrait.github.io/gas-prices-data/visualization) for the web version.
 
 ***If running locally***
 
